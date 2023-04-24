@@ -21,10 +21,6 @@ $ python run.py
 Before running SimCLR, make sure you choose the correct running configurations. You can change the running configurations by passing keyword arguments to the ```run.py``` file.
 
 ```python
-## add new args: noise, prob
-noise:jitter,flip,label,gaussian,gray,none
-prob:between 0 and 1
-gaussian std mean changes need to modify gaussian blur file in the SimCLR/data_aug/gaussian_blur.py
 ## dataset now become Medmnist dataset, dataset-name used default one.
 sepcify --download for downloading dataset
 $ python run.py -data ./datasets --dataset-name 
@@ -37,3 +33,7 @@ For 16-bit precision GPU training, there **NO** need to to install [NVIDIA apex]
 
 ## Feature Evaluation
 run python evaluate_cl.py or python evaluate_cl3.py for evaluation.
+change noise, prob value for different evaluation mode
+noise:jitter,flip,label,gaussian,gray,none
+prob:between 0 and 1
+gaussian std mean changes need to modify gaussian blur file in the SimCLR/data_aug/gaussian_blur.py
